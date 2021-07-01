@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    position: relative;
+    background:rgb(7, 250,153);
+    transition: background 0.5s ease;
+}
+
+.field-name{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    border-radius: 5px;
+    top:45%;
+    left:35%;
+    transition: translate(-50%,-50%);
+    justify-content: space-between;
+    width: 400px;
+    height: 50px;
+    background:white;
+    transition: all 0.5s ease-in-out;
+}
+.field-password,
+.field-mail,
+.field-finish{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    border-radius: 5px;
+    top:48%;
+    left:50%;
+    transition: translate(-50%,-50%);
+    justify-content: space-between;
+    width: 400px;
+    height: 50px;
+    background:white;
+    transition: all 0.5s ease-in-out;
+
+}
+
+.field-name i,
+.field-mail i,
+.field-finish i,
+.field-password i{
+    padding: 10px;
+    cursor: pointer;
+}
+
+.field-password input,
+.field-name input,
+.field-mail input{
+    border:0;
+    flex: 1;
+    outline: none;
+}
+
+div.inactive{
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%,0);
+}
+
+div.active{
+    opacity: 1;
+    pointer-events: all;
+    transform: translate(-50%,-50%);
+}
+
+@keyframes shake{
+    0%{
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+    50%{
+        transform: translate(-50%,-50%) rotate(10deg);
+    }
+    100%{
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+}
+
+@media only screen and (max-width:414px){
+    .field-name{
+        top: 45%;
+        left:2%
+    }
+        
+}
+
+@media only screen and (max-width:375px){
+    .field-name{
+        top: 45%;
+        left:0%
+    }       
+}
