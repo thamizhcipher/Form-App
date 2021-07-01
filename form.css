@@ -97,9 +97,5 @@ div.active{
         top: 45%;
         left:0%
     }       
-    .field-password,
-    .field-mail,
-    .field-finish{
-        left: 2%;
-    }
+    
 }
